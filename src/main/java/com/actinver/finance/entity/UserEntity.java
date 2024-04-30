@@ -1,9 +1,25 @@
 package com.actinver.finance.entity;
 
-public class User {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "user")
+public class UserEntity {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "idUser", nullable = false)
 	private Integer idUser;
+	
+	@Column(length = 30, nullable = false, unique = true)
 	private String name;
+	
+	@Column(length = 100, nullable = false)
 	private String user;
 	private String pasword;
 	private String typeUser;

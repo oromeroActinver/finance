@@ -1,12 +1,12 @@
 package com.actinver.finance.dto;
 
-import com.actinver.finance.entity.User;
+import com.actinver.finance.entity.UserEntity;
 
 public class UserDto {
 	
-	public User getUser() {
+	public UserEntity getUser() {
 		
-		User user = new User();
+		UserEntity user = new UserEntity();
 		user.setIdUser(0001);
 		user.setName("Orlando");
 		user.setUser("oromero");

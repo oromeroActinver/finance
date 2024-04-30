@@ -11,6 +11,7 @@
 	<groupId>com.actinver</groupId>
 	<artifactId>finance</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
 	<name>finance</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
@@ -21,12 +22,36 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			<exclusions>
+            <exclusion>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-tomcat</artifactId>
+            </exclusion>
+            
+            <exclusion>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+            </exclusion>
+            
+            <exclusion>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j</artifactId>
+            </exclusion>
+            
+        	</exclusions>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+				
+		<dependency>
+    		<groupId>jakarta.platform</groupId>
+    		<artifactId>jakarta.jakartaee-web-api</artifactId>
+    		<version>9.1.0</version>
+    		<scope>provided</scope>
 		</dependency>
 	</dependencies>
 
